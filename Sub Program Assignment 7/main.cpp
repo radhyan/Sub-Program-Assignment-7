@@ -1,14 +1,19 @@
-//
-//  main.cpp
-//  Sub Program Assignment 7
-//
-//  Created by Radhyanas on 08/11/22.
-//
-
 #include <iostream>
+#include <string>
+using namespace std;
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+string string_from_right(string word, int n){
+    long length = word.length();
+    return word.substr((length-n), n);
+}
+int main(){
+ int n;
+ string word;
+ 
+ cout << "Input the number of characters retrieved from the right: ";
+ cin >> n;
+ cout << "Input a string: ";
+ getline (cin >> ws, word);
+ 
+ cout << "Output: " << string_from_right(word, n) << endl;
 }
